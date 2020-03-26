@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: Arial;
+}
+
+body {
+	background: linear-gradient(to right, rgb(0, 153, 255), rgb(139, 255, 164));
+}
+
+.container {
+	width: 450px;
+	margin: 4rem auto;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+header {
+	background-color: #006caa;
+	color: white;
+	padding: 0.7rem;
+	text-transform: uppercase;
+}
+
+header .fa-plus {
+	float: right;
+}
+
+#addToDo {
+	padding: 0.8rem;
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: #f0f0f0;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+#addToDo:focus {
+	background: #fff;
+	outline: 2px solid #006caa;
+}
+
+li:nth-child(even) {
+	background-color: #f0f0f0;
+}
+
+li:nth-child(odd) {
+	background-color: #fff;
+}
+
+li {
+	display: flex;
+}
+
+.todo {
+	padding: 0.7rem;
+	display: block;
+}
+
+.deleteButton {
+	display: block;
+	background: #f00;
+	text-align: center;
+	padding-top: 0.6rem;
+	color: #fff;
+	width: 0;
+	opacity: 0;
+	transition: 0.2s linear;
+	cursor: pointer;
+}
+
+li:hover .deleteButton {
+	width: 40px;
+	opacity: 1.0;
+}
+
+.done {
+	color: #555;
+	text-decoration: line-through;
+}
+.plus {
+	color: white;
+}
+
+#addToDoButton {
+	content: url("plus.svg");
+	width: 1.1rem;
+	float: right;
+}
+
+.trash {
+	content: url("trash.svg");
+	width: 1.1rem;
+}
